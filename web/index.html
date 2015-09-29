@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<!--
+  Copyright (c) 2012, the Dart project authors.
+  Please see the AUTHORS file for details.
+  All rights reserved. Use of this source code
+  is governed by a BSD-style license that can be
+  found in the LICENSE file.
+-->
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>点名系统</title>
+    <script async type="application/dart" src="index.dart"></script>
+    <script async src="packages/browser/dart.js"></script>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<marquee>欢迎进入华东师范大学点名系统（试行）</marquee>
+<body>
+<table>
+
+
+    <tbody>
+    <tr>
+        <td>number:</td>
+        <td><input type="text" id="number"></td>
+        <td style="visibility: hidden">int</td>
+        <td><textarea class="result" id="intAsJson" readonly style="visibility: hidden"></textarea></td>
+    </tr>
+
+
+    <tr>
+        <td>password:</td>
+        <td><input type="password" id="password"></td>
+        <td style="visibility: hidden">String</td>
+        <td><textarea class="result" id="stringAsJson" readonly style="visibility: hidden"></textarea></td>
+    </tr>
+    </tbody>
+</table>
+
+<div>
+    <label style="visibility: hidden">All data together as a map</label><br>
+    <textarea id="mapAsJson" readonly style="visibility: hidden"></textarea>
+
+    <p></p>
+    <button type="submit" id="sub1">登录</button>
+    <button type="submit" id="sub2">重置</button>
+</div>
+
+<div>
+    <p></p>
+    <textarea id="fail" style="width: 200px" readonly>欢迎登录点名系统！请耐心等待</textarea>
+
+    <p></p>
+</div>
+
+<img src="images/welcome.jpg"
+     width="500" height="460"
+     style="position:absolute; top:50px; left:650px;"/>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>点名系统（教师）</title>
+    <script async type="application/dart" src="tea.dart"></script>
+    <script async src="packages/browser/dart.js"></script>
+</head>
+<body>
+
+<p>
+
+    <!--顶部图片-->
+    <img src="images/top.jpg"/>
+
+    <!--欢迎文字-->
+
+<p id="teacher"></p>
+
+
+<!--按钮-->
+<form>
+    <input type="submit" id="sub_rollname" value="随机点名"
+           style="width:120px; height:30px;  margin-top:30px; font-size:20px; font-family:'宋体'; background-color:white;"/>
+    <input type="submit" id="sub_answer" value="学生答题"
+           style="width:120px; height:30px;  margin-top:30px; font-size:20px; font-family:'宋体'; background-color:white;"/>
+    <input type="submit" id="sub_revise" value="修改信息"
+           style="width:120px; height:30px;  margin-top:30px; font-size:20px; font-family:'宋体'; background-color:white;"/>
+    <input type="submit" id="sub_logout" value="退出登录"
+           style="width:120px; he80t:30px;  margin-top:30px; font-size:20px; font-family:'宋体'; background-color:white;"/>
+</form>
+</center>
+
+<!--请选择课程-->
+<p style='font-family: "宋体";
+	font-size: 18px;
+	font-style: normal;
+	color: #000;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;请选择课程：</p>
+
+<!--课程列表-->
+<div>
+    <div id="class_name" class="ax_列表选择框" style="float:left">
+        <select id="classname" size="2"
+                style="width:200px; height:300px;margin-left:30px; font-size:20px; font-family:'宋体'; background-color:white;">
+        </select>
+    </div>
+
+
+    <!--学生列表-->
+    <div id="stu_name" class="ax_表格" style="float:left;margin-left:300px;position: absolute;">
+        <table width="850px" border="1" cellspacing="0">
+            <tr>
+                <td width="200" align="center">学号</td>
+                <td width="200" align="center">姓名</td>
+                <td width="200" align="center">专业</td>
+                <td width="250" align="center">出席情况（出席/请假/缺席）</td>
+            </tr>
+
+            <tr>
+                <td width="200" align="center"></td>
+                <td width="200" align="center"></td>
+                <td width="200" align="center"></td>
+                <td width="250" align="center">
+                    <input type="submit" name="sub_ob1" value="出席"
+                           style="width:60px; height:24px;font-size:14px; font-family:'宋体'; background-color:white;"/>
+                    <input type="submit" name="sub_ob2" value="请假"
+                           style="width:60px; height:24px;font-size:14px; font-family:'宋体'; background-color:white;"/>
+                    <input type="submit" name="sub_ob3" value="缺席"
+                           style="width:60px; height:24px;font-size:14px; font-family:'宋体'; background-color:white;"/>
+                </td>
+            </tr>
+
+
+        </table>
+    </div>
+</div>
+
+
+</body>
+</html>

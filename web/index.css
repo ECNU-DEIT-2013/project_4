@@ -1,0 +1,73 @@
+body, p {
+    position: absolute;
+    background-color: white;
+    font-family: '����';
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.2em;
+    margin: 15px;
+}
+
+td, th, label, table {
+    color: #333;
+    font-size: 24px;
+}
+
+table {
+    text-align: right;
+    border-spacing: 10px 40px;
+    height: 40px;
+    width: 100px;
+    margin-top: 50px;
+    margin-left: 150px;
+}
+
+label {
+    font-weight: bold;
+}
+
+textarea {
+    resize: none;
+
+}
+
+#fail {
+    font-size: 20px;
+    margin-left: 160px;
+}
+
+.result {
+    background-color: Ivory;
+    padding: 5px 5px 5px 5px;
+    border: 1px solid black;
+}
+
+#mapAsJson {
+    background-color: Ivory;
+    padding: 5px 5px 5px 5px;
+    margin-top: 15px;
+    border: 1px solid black;
+    width: 500px;
+    height: 50px;
+    font-size: 14px;
+}
+
+#sub1 {
+    position: absolute;
+    height: 30px;
+    width: 100px;
+    font-family: '����';
+    font-size: 16px;
+    margin-left: -340px;
+    margin-top: 10px;
+}
+
+#sub2 {
+    position: absolute;
+    height: 30px;
+    width: 100px;
+    font-family: '����';
+    font-size: 16px;
+    margin-left: -160px;
+    margin-top: 10px;
+}
