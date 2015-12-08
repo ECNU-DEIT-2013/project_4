@@ -8,12 +8,13 @@
 
 <body>
 <!--顶部图片-->
-<img src="images/top.jpg" width="750"  height="150" align="center "/>
+<img src="images/top.jpg" align="center "/>
+
 <!--欢迎文字-->
-<p style='font-family: "宋体";
+<p input style='font-family: "宋体";
 	font-size: 24px;
 	font-style: normal;
-	color: #000;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;同学，你好！</p>
+	color: #000;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;同学，你好！</p>
 
 <!--登出按钮-->
 <form>
@@ -28,7 +29,7 @@
 
 <!--课程列表-->
 <form>
-    <select name="courses" style="width:350px; height:60px; margin-left:150px; margin-top:30px; font-size:20px; font-family:'宋体'; background-color:white;"/>
+    <select name="courses" style="width:350px; height:40px; margin-left:150px; font-size:20px; font-family:'宋体'; background-color:white;"/>
       <option value="kc1">WEB编程</option>
       <option value="kc2">信息技术教学法</option>
       <option value="kc3">教学系统设计</option>
@@ -39,10 +40,18 @@
     </select>
 </form>
 
-<form>
-    <p style="font-family:'宋体'; font-size:28px; margin-top:60px; margin-left:750px;">学号/教工号 <input type="text" name="number" style="margin-left:50px; border-width:1px; width:200px; height:25px"/></p>
-</form>
 
+
+<div id="u10" class="text" style="font-family:'宋体'; font-size:24px;margin-left:150px;margin-left:150px;" >
+  <p>&nbsp;</p>
+  <p>到目前为止：</p>
+  
+  <p>该课程点名次数为 
+    <span style="text-decoration:underline;">&nbsp; &nbsp;&nbsp; </span>次，</p>
+  <p>你的请假次数为<span style="text-decoration:underline;"></span>
+    <span style="text-decoration:underline;"></span><span style="text-decoration:underline;">&nbsp;&nbsp; </span><span> 次，</span></p>
+  <p><span>你的缺席次数为 </span><span style="text-decoration:underline;">&nbsp;</span><span style="text-decoration:underline;">&nbsp;</span><span style="text-decoration:underline;">&nbsp;</span><span style="text-decoration:underline;">&nbsp;</span>次。</p>
+        </div>
 
 
 </body>
