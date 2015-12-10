@@ -7,28 +7,35 @@
 </head>
 
 <body>
+<center>
+
 <!--顶部图片-->
-<img src="images/top.jpg"align="center "/>
+<img src="images/top.jpg"/>
+
 <!--欢迎文字-->
-<p style='font-family: "宋体";
+<p input style='font-family: "宋体";
 	font-size: 24px;
 	font-style: normal;
-	color: #000;'"align="center ";>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;老师，您好！</p>
+	color: #000;'>老师，您好！</p>
 
-<!--登出按钮-->
+<!--按钮-->
 <form>
-    <input type="submit" name="sub3" value="登出" style="width:80px; height:30px;  font-size:20px;"align="center "; font-family:'宋体'; background-color:white;"/>
+    <input type="submit" name="sub4" value="课堂点名" style="width:120px; height:30px;  margin-top:30px; font-size:20px; font-family:'宋体'; background-color:white;"/>
+    <input type="submit" name="sub5" value="学生答题" style="width:120px; height:30px;  margin-top:30px; font-size:20px; font-family:'宋体'; background-color:white;"/>
+    <input type="submit" name="sub6" value="修改信息" style="width:120px; height:30px;  margin-top:30px; font-size:20px; font-family:'宋体'; background-color:white;"/>
+    <input type="submit" name="sub7" value="退出登录" style="width:120px; he80t:30px;  margin-top:30px; font-size:20px; font-family:'宋体'; background-color:white;"/>
 </form>
+</center>
 
 <!--请选择课程-->
 <p style='font-family: "宋体";
 	font-size: 18px;
 	font-style: normal;
-	color: #000;'"align="center ";>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;请选择课程：</p>
+	color: #000;'>请选择课程：</p>
 
 <!--课程列表-->
-<form>
-    <select name="courses" style="width:350px; height:60px;  font-size:20px; font-family:'宋体'; background-color:white;""align="center ";/>
+<div id="ul1" class="ax_列表选择框">
+  <select id="ul1_input" size="2" style="width:200px; height:350px; font-size:20px; font-family:'宋体'; background-color:white;"/>
       <option value="kc1">WEB编程</option>
       <option value="kc2">信息技术教学法</option>
       <option value="kc3">教学系统设计</option>
@@ -37,21 +44,23 @@
       <option value="kc6">毛概</option>
       <option value="kc7">C语言</option>
     </select>
-</form>
+</div>
 
-<form>
-    <p style="font-family:'宋体'; font-size:24px; margin-left:650px;""align="center ";>到目前为止，本学期这门课老师共点名
-    <input type="text" name="number" style="margin-left:50px; border-width:1px; width:50px; height:25px"/>次
-    </p>
+<!--学生列表-->
+<div id="ul2" class="ax_表格">
+  <table style="width:1400px;border:1px;">
+    <tr><td>学号</td><td>姓名</td><td>专业</td><td>出席情况（出席/请假/缺席）</td></tr>
+    <tr></tr>
+    <tr></tr>
+    <tr></tr>
+    <tr></tr>
+    <tr></tr>
+    <tr></tr>
+    <tr></tr>
+  </table>
+</div>
 
-    <p style="font-family:'宋体'; font-size:24px; margin-left:650px;""align="center ";>其中你出席
-    <input type="text" name="number" style="margin-left:50px; border-width:1px; width:50px; height:25px"/>次
-    </p>
 
-    <p style="font-family:'宋体'; font-size:24px; margin-left:650px;""align="center ";>缺席
-    <input type="text" name="number" style="margin-left:50px; border-width:1px; width:50px; height:25px"/>次
-    </p>
-</form>
 
 
 
