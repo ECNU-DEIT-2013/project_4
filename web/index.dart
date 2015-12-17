@@ -1,42 +1,55 @@
 import 'dart:html';
-import 'dart:math' as math;
-void main() {
-  querySelector('#sample_text_id')
-    ..text = 'Click me!'
-    ..onClick.listen(randomSelectStu);
-  querySelector('#sample_add_id').text =addNumber(1,2).toString();
+import 'dart:convert';
+import 'dart:async';
 
-  querySelector('#sample_button_id')
-    ..text = 'Add'
-    ..onClick.listen(addTwoNumber);
+HttpRequest request;
+String url = 'http://127.0.0.1:4040';
+// Input fields
+TextInputElement numberInput;
+TextInputElement passwordInput;
+//List list;
+main() {
+  // Set up the input text areas.
+  numberInput = querySelector('#number');
+  passwordInput = querySelector('#password');
+ // querySelector('#fail')..text = '欢迎登录点名系统！';
+  //Data = {'number':numberInput.value,'password':passwordInput.value};
+  querySelector('#sub1').onClick.listen(login);
+  querySelector('#sub2').onClick.listen(empty);
 }
 
-int addNumber(x,y){
-  return(x+y);
+void login(Event e) {
+
+  request = new HttpRequest(); //create request object
+  List<String> list = [numberInput.value, passwordInput.value];
+  e.preventDefault(); //suppress submit botton default behavior
+  request.onReadyStateChange
+      .listen(onData); //register callback to handle server response
+  request.open('POST', url); //make request
+  request.send(JSON.encode(list));
+  //request.send('{"password":"${passwordInput.value}"}');
 }
-void addTwoNumber(MouseEvent event){
-  vax x=int.parse(querySelector('#number_a').value);
-  vax y=int.parse(querySelector('#number_b').value);
-  querySelector('#sample_text_id2').text=addNumber(x,y).toString();
+
+void onData(_) {
+  if (request.readyState == HttpRequest.DONE && request.status == 200 &&
+  request.responseText == '1' ) {
+
+    window.open("stu.html", "点名系统（学生）");
+
+  } else if (request.readyState == HttpRequest.DONE && request.status == 200 &&
+  request.responseText == '2' ) {
+
+    window.open("tea.html", "点名系统（教师）");
+
+  } else{
+    // Status is 0; most likely the server isn't running.
+    querySelector('#fail')..text = '学（工）号或密码错误，请刷新后重新输入';
+    querySelector('#number')..value = ' ';
+    querySelector('#password')..value = ' ';
+  }
 }
 
-//void reverseText(MouseEvent event) {
- // var text = querySelector('#sample_text_id').text;
-  //var buffer = new StringBuffer();
- // for (int i = text.length - 1; i >= 0; i--) {
- //   buffer.write(text[i]);
- // }
-//  querySelector('#sample_text_id').text = buffer.toString();
-//}
-
-void randomSelectStu(MouseEvent event) {
-  var stuMap={
-    0:1213344345,
-    1:6786876872
-  };
-  var random = new math.Random();
-
-  var randomID=random.nextInt(2);
-  var stuID=stuMap[randomID];
-  querySelector('#sample_studentid_id').text =stuID.toString();
+void empty(Event e) {
+  querySelector('#number')..value = ' ';
+  querySelector('#password')..value = ' ';
 }

@@ -1,54 +1,61 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-
-    <title>ѧ����</title>
-
+    <meta charset="UTF-8">
+    <title>点名系统（学生）</title>
 </head>
-
-<body>
 <center>
+<body>
 
-<!--����ͼƬ-->
-<img src="images/top.jpg"/>
+<!--顶部图片-->
+<img src="images/top.jpg" align="center "/>
 
-<!--��ӭ����-->
-<p input style='font-family: "����";
+<!--欢迎文字-->
+<p style='font-family: "宋体";
 	font-size: 24px;
 	font-style: normal;
-	color: #000;'>ͬѧ����ã�</p>
+	color: #000;'>同学，你好！</p>
 
-<!--�ǳ���ť-->
+<!--登出按钮-->
 <form>
-    <input type="submit" name="sub3" value="�ǳ�" style="width:80px; height:30px; margin-left:650px; margin-top:30px; font-size:20px; font-family:'����'; background-color:white;"/>
+    <button type="submit" id="sub3"
+            style="margin-top: 0.1%;margin-left: 90%;border-color:black;border-width: 1px;width: 80px;height: 30px;font-family: '宋体';font-size: 20px;background-color: white;">登出</button>
 </form>
 
-<!--��ѡ��Ҫ�鿴�Ŀγ�-->
-<p style='font-family: "����";
+<!--请选择要查看的课程-->
+<p style='font-family: "宋体";
 	font-size: 18px;
 	font-style: normal;
-	color: #000;'>��ѡ��Ҫ�鿴�Ŀγ̣�</p>
+	color: #000;'>请选择要查看的课程：</p>
 
-<!--�γ��б�-->
+<!--课程列表-->
 <form>
-    <select name="courses" style="width:350px; height:40px; font-size:20px; font-family:'����'; background-color:white;"/>
-      <option value="kc1">WEB���</option>
-      <option value="kc2">��Ϣ������ѧ��</option>
-      <option value="kc3">��ѧϵͳ���</option>
-      <option value="kc4">��������ѧ</option>
-      <option value="kc5">��ԭ</option>
-      <option value="kc6">ë��</option>
-      <option value="kc7">C����</option>
+    <select id="courses" style="width:350px; height:40px; margin-left:150px; font-size:20px; font-family:'宋体'; background-color:white;"/>
+    <option value="kc1">WEB编程</option>
+    <option value="kc2">信息技术教学法</option>
+    <option value="kc3">教学系统设计</option>
+    <option value="kc4">教育技术学</option>
+    <option value="kc5">马原</option>
+    <option value="kc6">毛概</option>
+    <option value="kc7">C语言</option>
     </select>
 </form>
 
-<p style="font-family:'����'; font-size:24px;">��ĿǰΪֹ��</p>
-<p style="font-family:'����'; font-size:24px;">�ÿγ̵�������Ϊ <input type="text" name="number" style=" border-width:1px; width:35px; height:20px"/>��</p>
-<p style="font-family:'����'; font-size:24px;">����ٵĴ���Ϊ <input type="text" name="number" style=" border-width:1px; width:35px; height:20px"/>��</p>
-<p style="font-family:'����'; font-size:24px;">��ȱϯ�Ĵ���Ϊ <input type="text" name="number" style=" border-width:1px; width:35px; height:20px"/>��</p>
 
 
+<div id="u10" class="text" style="font-family:'宋体'; font-size:24px;margin-left:150px;margin-left:150px;" >
+    <p>&nbsp;</p>
+    <p>到目前为止：</p>
 
-</center>
+    <p>该课程点名次数为
+        <input type="text" id="call" style="width: 60px; height: 40px;" >&nbsp;次，</p>
+    <p>你的请假次数为
+        <input type="text" id="vacate" style="width: 60px; height: 40px;" >&nbsp;次，</p>
+    <p>你的缺席次数为
+        <input type="text" id="abcent" style="width: 60px; height: 40px;" >&nbsp;&nbsp;次。</p>
+</div>
+<script type="application/dart" src="stu.dart"></script>
+<script type="package/browser/dart.js"></script>
 </body>
+</center>
 </html>

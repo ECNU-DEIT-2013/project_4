@@ -1,9 +1,15 @@
-name: myconference
+name: 'one'
 version: 0.0.1
-description: A sample web application
+description: An absolute bare-bones web app.
+#author: Your Name <email@example.com>
+#homepage: https://www.example.com
+
+environment:
+  sdk: '>=1.0.0 <2.0.0'
+
 dependencies:
-  browser: any
-  messenger: "^0.0.7"
-  polymer: ">=0.15.1 <0.17.0"
-dev_dependencies:
-  unittest: any
+  browser: '>=0.10.0 <0.11.0'
+  dart_to_js_script_rewriter: '^0.1.0'
+  sqljocky: '0.14.1'
+transformers:
+- dart_to_js_script_rewriter

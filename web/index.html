@@ -1,33 +1,62 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+
+<!--
+  Copyright (c) 2012, the Dart project authors.
+  Please see the AUTHORS file for details.
+  All rights reserved. Use of this source code
+  is governed by a BSD-style license that can be
+  found in the LICENSE file.
+-->
+
+<html>
 <head>
-
-<title>µãÃûÏµÍ³</title>
-
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ç‚¹åç³»ç»Ÿ</title>
+    <script async type="application/dart" src="index.dart"></script>
+    <script async src="packages/browser/dart.js"></script>
+    <link rel="stylesheet" href="index.css">
 </head>
 
+<marquee>æ¬¢è¿è¿›å…¥åä¸œå¸ˆèŒƒå¤§å­¦ç‚¹åç³»ç»Ÿï¼ˆè¯•è¡Œï¼‰</marquee>
 <body>
-<!--ÎÄ×Ö¹ö¶¯-->
-<p style='font-family: "ËÎÌå";
-	font-size: 24px;
-	font-style: normal;
-	color: #000;'><marquee behavior="alternate">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;»¶Ó­½øÈë»ª¶«Ê¦·¶´óÑ§µãÃûÏµÍ³£¨ÊÔĞĞ£©</marquee></p>
-<!--Í¼Æ¬-->
-<img src="images/»¶Ó­Ò³.jpg" width="500" height="460" style="position:relative; top:60px; left:180px;"/>
+<table>
 
-<form> 
-  <p style="font-family:'ËÎÌå'; font-size:28px; margin-top:-250px; margin-left:750px;">ĞÕÃû<input type="text" name="name" style="margin-left:160px; border-width:1px; width:200px; height:25px"/></p>
 
-  <p style="font-family:'ËÎÌå'; font-size:28px; margin-top:60px; margin-left:750px;">Ñ§ºÅ/½Ì¹¤ºÅ <input type="text" name="number" style="margin-left:50px; border-width:1px; width:200px; height:25px"/></p>
-   </form>
-   
- <form>
-  <input type="submit" name="sub2" value="½ÌÊ¦µÇÂ¼" style="width:120px; height:50px; margin-left:750px; margin-top:40px; font-size:24px; font-family:'ËÎÌå'; background-color:white;"/> 
-  </form>
-  <form style="margin-top:-50px; margin-left:1050px;">
-  <input type="submit" name="sub1" value="Ñ§ÉúµÇÂ¼" style="width:120px; height:50px; font-size:24px; font-family:'ËÎÌå'; background-color:white; "/> 
-</form>
+    <tbody>
+    <tr>
+        <td>number:</td>
+        <td><input type="text" id="number"></td>
+        <td style="visibility: hidden">int</td>
+        <td><textarea class="result" id="intAsJson" readonly  style="visibility: hidden"></textarea></td>
+    </tr>
 
+
+    <tr>
+        <td>password:</td>
+        <td><input type="text" id="password"></td>
+        <td style="visibility: hidden">String</td>
+        <td ><textarea class="result" id="stringAsJson" readonly style="visibility: hidden"></textarea></td>
+   </tr>
+    </tbody>
+</table>
+
+<div>
+    <label style="visibility: hidden">All data together as a map</label><br>
+    <textarea id="mapAsJson" readonly  style="visibility: hidden"></textarea>
+<p></p>
+    <button type="submit" id="sub1">ç™»å½•</button>
+    <button type="submit" id="sub2">é‡ç½®</button>
+</div>
+
+<div>
+    <p></p>
+    <textarea id="fail" readonly>æ¬¢è¿ç™»å½•ç‚¹åç³»ç»Ÿï¼</textarea>
+    <p></p>
+</div>
+
+<img src="images/welcome.jpg"
+     width="500" height="460"
+     style="position:absolute; top:50px; left:650px;"/>
 </body>
 </html>
-
