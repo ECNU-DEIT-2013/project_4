@@ -17,15 +17,13 @@
     <p id="teachername" style='font-family: "宋体";
 	font-size: 20px;
 	font-style: normal;
-	color: #000;'>老师，您好！</p>
+	color: #000;'></p>
 <center>
 
     <!--按钮-->
     <form>
         <button type="submit" id="sub_rollname" style="width:120px; height:30px;  margin-top:30px; font-size:20px; font-family:'宋体'; background-color:white;">随机点名</button>
-        <button type="submit" id="sub_answer" style="width:120px; height:30px;  margin-top:30px; font-size:20px; font-family:'宋体'; background-color:white;">学生答题</button>
-        <button type="submit" id="sub_revise" style="width:120px; height:30px;  margin-top:30px; font-size:20px; font-family:'宋体'; background-color:white;">修改信息</button>
-        <button type="submit" id="sub_logout" style="width:120px; height:30px;  margin-top:30px; font-size:20px; font-family:'宋体'; background-color:white;">退出登录</button>
+        <button type="submit" id="sub_logout" style="width:120px; height:30px;  margin-top:30px;margin-left: 100px; font-size:20px; font-family:'宋体'; background-color:white;">退出登录</button>
     </form>
 </center>
 
@@ -37,9 +35,9 @@
 
 <!--课程列表-->
 <div>
-    <div id = "class_name" class="ax_列表选择框" style="float:left">
-        <select id="classname" size="2" style="width:200px; height:300px;margin-left:30px; font-size:20px; font-family:'宋体'; background-color:white;">
-        </select>
+    <div id = "class_name" class="ax_列表选择框" style="float:left; margin-left: 50px;">
+        <input list = "coursename" style=" width: 200px; height: 30px;" />
+        <datalist id="coursename"></datalist>
     </div>
 
 
