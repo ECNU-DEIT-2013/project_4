@@ -12,7 +12,6 @@ main() {
   passwordInput = querySelector('#password');
   querySelector('#sub1').onClick.listen(login);
   querySelector('#sub2').onClick.listen(empty);
-
 }
 
 void login(Event e) {
