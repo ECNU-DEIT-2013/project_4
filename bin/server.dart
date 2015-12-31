@@ -131,7 +131,7 @@ var student_name = await pool.query(
     stu_number = '${row[0]}';
     stu_name = '${row[1]}';
     stu_ab = '${row[2]}';
-    List stu_inf = ["学号：$stu_number","姓名：$stu_name","缺席次数：$stu_ab"];
+    List stu_inf = ["$stu_number","$stu_name","$stu_ab"];
     stuinf.add(stu_inf);
   });
   print(stuinf);
@@ -147,15 +147,19 @@ rollname(HttpRequest request) async {
  request.response.close();
 }   //随机点名
 absence(HttpRequest request) async{
+  addCorsHeaders(request.response);
+  var studentnumber,studentab,stuab;
+  studentnumber = selectstu[0];
+  studentab = selectstu[2];
   int stu_ab1;
-  stu_ab1 = int.parse(stu_ab);
-  //assert(stu_ab == stu__ab);
+  stu_ab1 = int.parse(studentab);
   stu_ab1 = stu_ab1 + 1;
   print(stu_ab1);
-  stu_ab = stu_ab1.toString();
   pool.query(
-      'UPDATE SC SET　OB＝ "$stu_ab"  WHERE SNUM = "$stu_number" AND CNUM = "$coursename"'
+      'UPDATE SC,C SET SC.OB = $stu_ab1 WHERE SC.CNUM = C.CNUM AND C.CNAME = "$coursename" AND SC.SNUM = "$studentnumber"'
   );
+  request.response.write(JSON.encode(stu_ab1));
+  request.response.close();
 }
 stuabsence(HttpRequest request) async {
   addCorsHeaders(request.response);

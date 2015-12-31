@@ -78,8 +78,20 @@ Random_name(_){
     stu_name.text = 'ERROR:${request.status}';
   }
 }     //随机学生信息的显示
-abyes(Event e) async {
+abyes(Event e) {
   request = new HttpRequest();
-  request.open('POST',path_absence);
-  request.send('1');
+  request
+    ..open('POST',path_absence)
+    ..onReadyStateChange.listen(absence)
+      ..send('1');
 } //yes按钮点击一次，为学生增加一次缺席次数，上传至服务器
+absence(_) async {
+  var abcishu,abcishu1;
+  if (request.status == 200) {
+    abcishu = JSON.decode(request.responseText);
+    abcishu1 = abcishu.toString();
+    querySelector('#stu_ab').text = abcishu1;
+  }else{
+  stu_name.text = 'ERROR:${request.status}';
+}
+  }
