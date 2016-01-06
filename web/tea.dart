@@ -12,7 +12,8 @@ var course_name;   //获取选中的课程名称
 var stu_name,stu_number,stu_ab;     //学生姓名，学号，缺席次数
 var mycourse, coursename;   //mycourse代表select中的下拉值，coursename为select的id
 var yes,no;   //按钮yes,no
-var path = 'http://127.0.0.1:8080/tea';
+var host = '52.193.36.64';
+var url = host + ':8080/tea';
 var path_allname = 'http://127.0.0.1:8080/allname';
 var path_rollname = 'http://127.0.0.1:8080/rollname';
 var path_absence = 'http://127.0.0.1:8080/absence';

@@ -3,6 +3,7 @@ import 'package:sqljocky/sqljocky.dart';
 import 'dart:convert';
 import 'dart:math' show Random;
 
+
 var pool;
 List randomlist;
 List list, course;
@@ -23,7 +24,7 @@ int length_stuinf;
 var stuRandomNumber;
 main() async {
   pool = new ConnectionPool(      //连接数据库
-      host: '52.8.67.180',
+      host: '52.193.39.90',
       port: 3306,
       user: 'dec2013stu',
       password: 'dec2013stu',
