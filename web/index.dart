@@ -3,25 +3,19 @@ import 'dart:convert';
 import 'dart:async';
 
 HttpRequest request;
+var host = "52.193.36.64";
 var url = 'http://127.0.0.1:8080/login';
-// Input fields
 TextInputElement numberInput;
 TextInputElement passwordInput;
 List list;
-
 main() {
-  // Set up the input text areas.
   numberInput = querySelector('#number');
   passwordInput = querySelector('#password');
-  // querySelector('#fail')..text = '欢迎登录点名系统！';
-  //Data = {'number':numberInput.value,'password':passwordInput.value};
   querySelector('#sub1').onClick.listen(login);
   querySelector('#sub2').onClick.listen(empty);
-
 }
 
 void login(Event e) {
-
   request = new HttpRequest(); //create request object
   list = [numberInput.value, passwordInput.value];
   e.preventDefault(); //suppress submit botton default behavior
@@ -56,7 +50,7 @@ void onData(_) {
       querySelector('#password')
         ..value = passwordInput.value;
     }
-    if (log[0] == 3) {
+    if (log[0] == 3){
       // Status is 0; most likely the server isn't running.
       querySelector('#fail')
         ..text = '学（工）号或密码错误，请重新输入';
@@ -65,7 +59,7 @@ void onData(_) {
       querySelector('#password')
         ..value = passwordInput.value;
     }
-  } else if (log[0] == null) {
+  }else if (log[0] == null){
     // Status is 0; most likely the server isn't running.
     querySelector('#fail')
       ..text = '欢迎登录点名系统！请耐心等待';
@@ -78,10 +72,7 @@ void onData(_) {
 
 
 void empty(Event e) {
-  querySelector('#number')
-    ..value = '';
-  querySelector('#password')
-    ..value = '';
-  querySelector('#fail')
-    ..text = '欢迎登录点名系统,请输入学（工）号和密码';
+  querySelector('#number')..value = '';
+  querySelector('#password')..value = '';
+  querySelector('#fail')..text = '欢迎登录点名系统,请输入学（工）号和密码';
 }

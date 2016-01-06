@@ -1,7 +1,7 @@
-body, p {
+body, p{
     position: absolute;
     background-color: white;
-    font-family: 'ï¿½ï¿½ï¿½ï¿½';
+    font-family: 'ËÎÌå';
     font-size: 14px;
     font-weight: normal;
     line-height: 1.2em;
@@ -14,7 +14,7 @@ td, th, label, table {
 }
 
 table {
-    text-align: right;
+    text-align:right;
     border-spacing: 10px 40px;
     height: 40px;
     width: 100px;
@@ -30,10 +30,9 @@ textarea {
     resize: none;
 
 }
-
-#fail {
+#fail{
     font-size: 20px;
-    margin-left: 160px;
+    margin-left: 165px;
 }
 
 .result {
@@ -49,25 +48,23 @@ textarea {
     border: 1px solid black;
     width: 500px;
     height: 50px;
-    font-size: 14px;
+    font-size:14px;
 }
-
-#sub1 {
+#sub1{
     position: absolute;
     height: 30px;
     width: 100px;
-    font-family: 'ï¿½ï¿½ï¿½ï¿½';
+    font-family: 'ËÎÌå';
     font-size: 16px;
     margin-left: -340px;
     margin-top: 10px;
 }
-
-#sub2 {
+#sub2{
     position: absolute;
     height: 30px;
     width: 100px;
-    font-family: 'ï¿½ï¿½ï¿½ï¿½';
+    font-family: 'ËÎÌå';
     font-size: 16px;
-    margin-left: -160px;
+    margin-left:-160px;
     margin-top: 10px;
 }
