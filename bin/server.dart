@@ -36,11 +36,11 @@ main() async {
       await login(request);
     }
     if (request.uri.path == "/tea" || request.uri.path == "/stu") {     //tea.dart中显示教师姓名和课程名称
-        await handleGET(request);
-       }
+      await handleGET(request);
+    }
     if(request.uri.path == "/allname"){     //根据教师端传来的课程名，获取所有学生信息
-       await allname(request);
-      }
+      await allname(request);
+    }
     if(request.uri.path == "/rollname"){
       await rollname(request);
     }
@@ -59,14 +59,14 @@ login(HttpRequest request) async {
   try {
     data = await request.transform(UTF8.decoder.fuse(JSON.decoder)).first;
   } catch (e) {
-   print('Request listen error:$e');
+    print('Request listen error:$e');
   }
   print(data[0]);   //测试是否收到登录界面传来的学号
   print(data[1]);   //测试是否收到密码
   num = data[0];
   var passwords =
   await pool.query('select SNAME,PASSWORD from S where SNUM = $num');   //选择学生姓名，密码
-    passwords.forEach((row) async {
+  passwords.forEach((row) async {
     print('Password: ${row[1]}');   //显示学号对应的密码
     name = '${row[0]}';   //name为获取的姓名
     password = '${row[1]}';   //password为获取的密码
@@ -76,11 +76,11 @@ login(HttpRequest request) async {
       var Course =      //获取课程信息
       await pool.query('select SC.CNUM,C.CNAME from C,SC where C.CNUM = SC.CNUM AND SC.SNUM = $num');
       await Course.forEach((row) {
-    cnum = '${row[0]}';   //课程编号
-    cname = '${row[1]}';    //课程名字
-    course.add("$cname");   //添加课程名字至course
-  });
-  print(course);    //测试
+        cnum = '${row[0]}';   //课程编号
+        cname = '${row[1]}';    //课程名字
+        course.add("$cname");   //添加课程名字至course
+      });
+      print(course);    //测试
     } else if (data[1] != password) {
       list = [3, '错误'];
     }
@@ -93,7 +93,7 @@ login(HttpRequest request) async {
     print('Password: ${row[1]}');
     if (data[1] == password) {
       list = [2, '$name'];
-     course = [name];
+      course = [name];
       var Course =      //获取课程信息
       await pool.query('select CNUM,CNAME from C where TNUM = $num');
       await Course.forEach((row) {
@@ -116,7 +116,7 @@ handleGET(HttpRequest request)async{
   request.response.close();
 }
 allname(HttpRequest request) async {
- // var coursename;
+  // var coursename;
   addCorsHeaders(request.response);
   try {
     coursename = await request.transform(UTF8.decoder.fuse(JSON.decoder)).first;
@@ -124,8 +124,8 @@ allname(HttpRequest request) async {
     print('Error:$e');
   }
   print(coursename);
-    stuinf = new List();
-var student_name = await pool.query(
+  stuinf = new List();
+  var student_name = await pool.query(
       'select S.SNUM,S.SNAME,SC.OB from S,SC,C where S.SNUM = SC.SNUM AND SC.CNUM = C.CNUM AND C.CNAME = "$coursename"');
   await student_name.forEach((row) {
     stu_number = '${row[0]}';
@@ -139,12 +139,12 @@ var student_name = await pool.query(
   request.response.close();
 }      //学生信息
 rollname(HttpRequest request) async {
- length_stuinf = stuinf.length;   //使随机数的范围在选课人数之内
+  length_stuinf = stuinf.length;   //使随机数的范围在选课人数之内
   stuRandomNumber = new Random().nextInt(length_stuinf);  //获取随机数
- selectstu = stuinf[stuRandomNumber];
- addCorsHeaders(request.response);
- request.response.write(JSON.encode(stuinf[stuRandomNumber]));
- request.response.close();
+  selectstu = stuinf[stuRandomNumber];
+  addCorsHeaders(request.response);
+  request.response.write(JSON.encode(stuinf[stuRandomNumber]));
+  request.response.close();
 }   //随机点名
 absence(HttpRequest request) async{
   addCorsHeaders(request.response);

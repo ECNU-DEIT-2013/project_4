@@ -30,22 +30,22 @@ StuShow(_) {
     mycourse = new Element.html('<option value="''">...</option>');   //select中第一个值
     querySelector('#coursename').children.add(mycourse);    //添加mycourse
     for (i = 1; i < Data.length; i++) {
-    mycourse = new Element.html('<option value="' + Data[i] + '">'+ Data[i]+'</option>');    //添加课程名
-    querySelector('#coursename').children.add(mycourse);
-      }
-   print(course_name);  //测试是否成功获取全部课程名
-    } else if (request.readyState == HttpRequest.DONE && request.status == 0) {
-    querySelector('#studentname').text = 'No server';   //监测是否有错误
+      mycourse = new Element.html('<option value="' + Data[i] + '">'+ Data[i]+'</option>');    //添加课程名
+      querySelector('#coursename').children.add(mycourse);
     }
+    print(course_name);  //测试是否成功获取全部课程名
+  } else if (request.readyState == HttpRequest.DONE && request.status == 0) {
+    querySelector('#studentname').text = 'No server';   //监测是否有错误
+  }
 }
 changecou(Event e){
   course_name = document.getElementById('coursename').value;
   print(course_name);
   request = new HttpRequest();
   request
-  ..open('POST',path_stuabsence)
-  ..onReadyStateChange.listen(stu_absence)
-  ..send(JSON.encode(course_name));
+    ..open('POST',path_stuabsence)
+    ..onReadyStateChange.listen(stu_absence)
+    ..send(JSON.encode(course_name));
 }
 stu_absence(_){
   if (request.readyState == HttpRequest.DONE && request.status == 200) {

@@ -9,7 +9,7 @@
         function change_cou(val){
             alert("已选择的课程为：" + val);
         }
-            </script>
+    </script>
 </head>
 <body>
 <center>
@@ -20,35 +20,35 @@
 	font-size: 24px;
 	font-style: normal;
 	color: #000;'></p>
-   <p id="teachername1" style='font-family: "宋体";
+    <p id="teachername1" style='font-family: "宋体";
 	font-size: 10px;
 	font-style: normal;
 	color: #000;'>若未显示课程名称，请刷新一次....</p>
     <!--按钮-->
-        <button id="sub_rollname" style="width:100px; height:30px;  margin-top:30px;margin-left: 10px;font-size:18px; font-family:'宋体'; background-color:white;">随机点名</button>
-        <button id="sub_logout" style="width:100px; height:30px;  margin-top:30px;margin-left: 50px;font-size:18px; font-family:'宋体'; background-color:white;" onclick="window.close()">退出登录</button>
-<!--请选择课程-->
-<p style='font-family: "宋体";
+    <button id="sub_rollname" style="width:100px; height:30px;  margin-top:30px;margin-left: 10px;font-size:18px; font-family:'宋体'; background-color:white;">随机点名</button>
+    <button id="sub_logout" style="width:100px; height:30px;  margin-top:30px;margin-left: 50px;font-size:18px; font-family:'宋体'; background-color:white;" onclick="window.close()">退出登录</button>
+    <!--请选择课程-->
+    <p style='font-family: "宋体";
 	font-size: 18px;
 	font-style: normal;
 	color: #000;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;请选择课程：</p>
-<!--课程列表-->
-<div>
-    <div id = "class_name" class="ax_列表选择框">
-              <select id="coursename" style=" width: 200px; height: 30px;"
-               onchange="change_cou(this.value,this.click); "></select>
-    </div>
-   </div>
+    <!--课程列表-->
     <div>
-  <p  style="font-family: '宋体'; font-size: 24px;">学号：<label id="stu_number" ></label></p>
-    <p  style="font-family: '宋体'; font-size: 24px;">姓名：<label id="stu_name"></label></p>
-    <p style="font-family: '宋体'; font-size: 24px;">缺席次数：<label id="stu_ab"></label></p>
-         </div>
-<div>
-    <p id="infor"></p>
-    <button id="yes" style="font-size: 20px;margin-left: 20px"></button>
-    <button id="no" style="font-size: 20px;margin-left: 60px;" ></button>
-</div>
-    </center>
+        <div id = "class_name" class="ax_列表选择框">
+            <select id="coursename" style=" width: 200px; height: 30px;"
+                    onchange="change_cou(this.value,this.click); "></select>
+        </div>
+    </div>
+    <div>
+        <p  style="font-family: '宋体'; font-size: 24px;">学号：<label id="stu_number" ></label></p>
+        <p  style="font-family: '宋体'; font-size: 24px;">姓名：<label id="stu_name"></label></p>
+        <p style="font-family: '宋体'; font-size: 24px;">缺席次数：<label id="stu_ab"></label></p>
+    </div>
+    <div>
+        <p id="infor"></p>
+        <button id="yes" style="font-size: 20px;margin-left: 20px"></button>
+        <button id="no" style="font-size: 20px;margin-left: 60px;" ></button>
+    </div>
+</center>
 </body>
 </html>

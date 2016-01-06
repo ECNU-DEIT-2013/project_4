@@ -26,7 +26,7 @@ main() async {
   stu_name = querySelector('#stu_name');
   stu_number = querySelector('#stu_number');
   stu_ab = querySelector('#stu_ab');
-  }
+}
 void teaname_show(Event e) {
   request = new HttpRequest();
   request
@@ -74,7 +74,7 @@ Random_name(_){
     querySelector('#yes').text = '是';
     querySelector('#no').text = '否';    //显示判断按钮
     querySelector('#yes').onClick.listen(abyes);    //点击按钮yes为学生添加缺席记录，点击no无反应
-    }else{
+  }else{
     stu_name.text = 'ERROR:${request.status}';
   }
 }     //随机学生信息的显示
@@ -83,7 +83,7 @@ abyes(Event e) {
   request
     ..open('POST',path_absence)
     ..onReadyStateChange.listen(absence)
-      ..send('1');
+    ..send('1');
 } //yes按钮点击一次，为学生增加一次缺席次数，上传至服务器
 absence(_) async {
   var abcishu,abcishu1;
@@ -92,6 +92,6 @@ absence(_) async {
     abcishu1 = abcishu.toString();
     querySelector('#stu_ab').text = abcishu1;
   }else{
-  stu_name.text = 'ERROR:${request.status}';
-}
+    stu_name.text = 'ERROR:${request.status}';
   }
+}

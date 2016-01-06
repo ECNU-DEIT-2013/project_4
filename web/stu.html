@@ -10,48 +10,48 @@
     }
 </script>
 <center>
-<body>
+    <body>
 
-<!--顶部图片-->
-<img src="images/top.jpg" align="center "/>
+    <!--顶部图片-->
+    <img src="images/top.jpg" align="center "/>
 
-<!--欢迎文字-->
-<p id="studentname" style='font-family: "宋体";
+    <!--欢迎文字-->
+    <p id="studentname" style='font-family: "宋体";
 	font-size: 24px;
 	font-style: normal;
 	color: #000;'></p>
-<p id="teachername1" style='font-family: "宋体";
+    <p id="teachername1" style='font-family: "宋体";
 	font-size: 10px;
 	font-style: normal;
 	color: #000;'>若未显示课程名称，请刷新一次....</p>
-<!--登出按钮-->
-<form>
-    <button id="sub_logout"
-            style="width:100px; height:30px;  margin-top:30px;margin-left: 350px;font-size:18px; font-family:'宋体'; background-color:white;" onclick="window.close()">退出登录</button>
-</form>
-<!--请选择要查看的课程-->
-<p style='font-family: "宋体";
+    <!--登出按钮-->
+    <form>
+        <button id="sub_logout"
+                style="width:100px; height:30px;  margin-top:30px;margin-left: 350px;font-size:18px; font-family:'宋体'; background-color:white;" onclick="window.close()">退出登录</button>
+    </form>
+    <!--请选择要查看的课程-->
+    <p style='font-family: "宋体";
 	font-size: 18px;
 	font-style: normal;
 	color: #000;'>请选择要查看的课程：</p>
 
-<!--课程列表-->
-<form>
-    <select id="coursename" style=" width: 200px; height: 30px;"
-            onchange="change_cou(this.value);"  ></select>
+    <!--课程列表-->
+    <form>
+        <select id="coursename" style=" width: 200px; height: 30px;"
+                onchange="change_cou(this.value);"  ></select>
 
-</form>
+    </form>
 
 
 
-<div id="u10" class="text" style="font-family:'宋体'; font-size:24px;margin-left:120px;" >
-    <p>&nbsp;</p>
-    <p style="margin-left: -100px">到目前为止：</p>
-    <p style="margin-left: -100px">你的缺席次数为 <label id="absence">&nbsp;&nbsp;</label><label>&nbsp;&nbsp;</label>次。</p>
+    <div id="u10" class="text" style="font-family:'宋体'; font-size:24px;margin-left:120px;" >
+        <p>&nbsp;</p>
+        <p style="margin-left: -100px">到目前为止：</p>
+        <p style="margin-left: -100px">你的缺席次数为 <label id="absence">&nbsp;&nbsp;</label><label>&nbsp;&nbsp;</label>次。</p>
 
-</div>
-<script type="application/dart" src="stu.dart"></script>
-<script type="package/browser/dart.js"></script>
-</body>
+    </div>
+    <script type="application/dart" src="stu.dart"></script>
+    <script type="package/browser/dart.js"></script>
+    </body>
 </center>
 </html>

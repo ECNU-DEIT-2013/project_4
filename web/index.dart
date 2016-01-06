@@ -4,7 +4,7 @@ import 'dart:async';
 
 HttpRequest request;
 var host = "52.193.36.64";
-var url = 'http://127.0.0.1:8080/login';
+var url = host + ':8080/login';
 TextInputElement numberInput;
 TextInputElement passwordInput;
 List list;
