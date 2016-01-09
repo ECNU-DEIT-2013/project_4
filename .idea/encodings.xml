@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/bin/server.dart" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/web/index.dart" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/web/stu.dart" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/web/tea.dart" charset="UTF-8" />
+  </component>
+</project>
